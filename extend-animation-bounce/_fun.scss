@@ -1,0 +1,13 @@
+@function random-hex() {
+    $value: '#';
+    @for $i from 1 through 6 {
+        $temp: random(16) - 1;
+        @if ($temp > 9){
+            $over:"ABCDEF";
+            $temp: calc($temp - 9);
+            $temp: str-slice($over, $temp, $temp);
+        }
+        $value: $value + $temp;
+    }
+    @return unquote($value);
+}

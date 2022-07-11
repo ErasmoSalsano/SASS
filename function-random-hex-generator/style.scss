@@ -1,0 +1,9 @@
+@use 'fun';
+
+.col{
+    height: 100px;
+
+    @for $i from 1 through 12{
+        &:nth-child(#{$i}){background-color: fun.random-hex();}
+    }
+}

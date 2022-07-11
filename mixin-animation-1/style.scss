@@ -1,0 +1,27 @@
+@use 'anim';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-left: 2rem;
+}
+
+.el{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+}
+
+@include anim.bounce(-50px);
+
+.bounce{
+    animation: bounce 1s linear;
+    /* animation-iteration-count: infinite; */
+}

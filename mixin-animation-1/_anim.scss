@@ -1,0 +1,7 @@
+@mixin bounce($range, $start: 0){
+    @keyframes bounce{
+        0%, 20%, 50%, 80%, 100% {transform: translateY($start);}
+        40% {transform: translateY($range);}
+        60% {transform: translateY(calc($range / 2));}
+    }
+}

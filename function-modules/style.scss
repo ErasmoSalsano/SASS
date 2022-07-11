@@ -1,0 +1,39 @@
+@use 'var';
+@use 'fun';
+
+div{
+    border: var.$border-basic var.$third-color;
+    justify-content: center;
+    text-align: center;
+
+    h1{
+        color: var.$main-color;
+        text-decoration: underline;
+        text-decoration-color: var.$second-color;
+        text-decoration-thickness: fun.to-rem(2px);
+        text-underline-offset: .4rem;
+        margin-bottom: 0;
+    }
+
+    section{
+        padding: 1rem;
+        display: flex;
+
+        article{
+    
+            &:nth-child(odd){
+                @include var.article(var.$second-color, var.$main-color);
+            }
+    
+            &:nth-child(even){
+                @include var.article(var.$third-color, var.$main-color);
+            }
+        }
+
+        &:last-child{
+            article{
+                @include var.article(var.$main-color, var.$second-color, fun.to-rem(24px));
+            }
+        }
+    }
+}

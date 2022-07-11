@@ -1,0 +1,13 @@
+$main-color: green;
+$second-color: blue;
+$third-color: red;
+
+$border-basic: 1px solid;
+
+@mixin article ($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border: $border-basic $border-color;
+    font-size: $font-size;
+    padding: 1rem;
+    flex: 1;
+}

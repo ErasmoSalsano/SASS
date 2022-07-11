@@ -1,0 +1,38 @@
+$main-color: green;
+$second-color: blue;
+$third-color: red;
+
+$border-basic: 1px solid;
+
+div{
+    border: $border-basic $third-color;
+    justify-content: center;
+    text-align: center;
+
+    h1{
+        color: $main-color;
+        text-decoration: underline;
+        text-decoration-color: $second-color;
+        text-decoration-thickness: 2px;
+        text-underline-offset: .4rem;
+        
+    }
+
+    section{
+        padding: 1rem;
+        display: flex;
+
+        article{
+            border: $border-basic $main-color;
+            padding: 1rem;
+    
+            &:nth-child(odd){
+                color: $second-color;
+            }
+    
+            &:nth-child(even){
+                color: $third-color;
+            }
+        }
+    }
+}
